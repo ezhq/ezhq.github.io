@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>《Arduino Workshop(动手玩转Arduino)》—— John Boxall | Aurdes</title>
+  
+  <meta name="keywords" content="ezhq dev">
+  
+  
+  <meta name="description" content="关于Arduino，关于硬件。文章较长，PC环境下浏览体验更佳。, ezhq's official website.">
+  
+
+  
+  <link rel="alternate" href="/atom.xml" title="Aurdes">
+  
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- meta -->
+  
+
+  <!-- link -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.6.3/css/all.min.css">
+  
+
+  
+  <link rel="shortcut icon" type="image/x-icon" href="/img/main/logo_single.png">
+  
+
+  
+  <link rel="stylesheet" href="/style.css">
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+
+  
+  
+</head>
+
+<body>
+    <div id="loading-bar-wrapper">
+  <div id="loading-bar" class="pure"></div>
+</div>
+
+    <script>setLoadingBarProgress(20)</script>
+    <header class="l_header pure">
+	<div class="wrapper">
+		<div class="nav-main container container--flex">
+      <a class="logo flat-box" href="/">
+        
+          Aurdes
+        
+      </a>
+			<div class="menu">
+				<ul class="h-list">
+          
+  					
+  						<li>
+								<a id="https:aurdes.com" class="nav flat-box" href="https://aurdes.com/">
+									<i class="fas fa-home fa-fw"></i>&nbsp;Home
+								</a>
+							</li>
+      			
+  						<li>
+								<a id="home" class="nav flat-box" href="/">
+									<i class="fas fa-rss fa-fw"></i>&nbsp;Blog
+								</a>
+							</li>
+      			
+  						<li>
+								<a id="archives" class="nav flat-box" href="/archives/">
+									<i class="fas fa-archive fa-fw"></i>&nbsp;Timeflow
+								</a>
+							</li>
+      			
+  						<li>
+								<a id="friends" class="nav flat-box" href="/friends/">
+									<i class="fas fa-users fa-fw"></i>&nbsp;Friends
+								</a>
+							</li>
+      			
+      		
+				</ul>
+			</div>
+
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="搜索">
+						<span class="icon"><i class="fas fa-search fa-fw"></i></span>
+					</form>
+				</div>
+			
+			<ul class="switcher h-list">
+				
+					<li class="s-search"><a class="fas fa-search fa-fw" href="javascript:void(0)"></a></li>
+				
+				<li class="s-menu"><a class="fas fa-bars fa-fw" href="javascript:void(0)"></a></li>
+			</ul>
+		</div>
+
+		<div class="nav-sub container container--flex">
+			<a class="logo flat-box"></a>
+			<ul class="switcher h-list">
+				<li class="s-comment"><a class="flat-btn fas fa-comments fa-fw" href="javascript:void(0)"></a></li>
+				<li class="s-toc"><a class="flat-btn fas fa-list fa-fw" href="javascript:void(0)"></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+	<aside class="menu-phone">
+    <header>
+		<nav class="menu">
+      <ul>
+          
+              
+                  <li>
+										<a id="https:aurdes.com" class="nav flat-box" href="https://aurdes.com/">
+											<i class="fas fa-home fa-fw"></i>&nbsp;Home
+										</a>
+                  </li>
+              
+                  <li>
+										<a id="home" class="nav flat-box" href="/">
+											<i class="fas fa-rss fa-fw"></i>&nbsp;Blog
+										</a>
+                  </li>
+              
+                  <li>
+										<a id="archives" class="nav flat-box" href="/archives/">
+											<i class="fas fa-archive fa-fw"></i>&nbsp;Timeflow
+										</a>
+                  </li>
+              
+                  <li>
+										<a id="friends" class="nav flat-box" href="/friends/">
+											<i class="fas fa-users fa-fw"></i>&nbsp;Friends
+										</a>
+                  </li>
+              
+       
+      </ul>
+		</nav>
+    </header>
+	</aside>
+
+    <script>setLoadingBarProgress(40);</script>
+    <div class="l_body">
+    <div class='container clearfix'>
+        <div class='l_main'>
+            <article id="post" class="post white-box article-type-post" itemscope itemprop="blogPost">
+  
+<section class="meta">
+  
+  
+  <div class="meta" id="header-meta">
+    
+      
+          <h1 class="title">《Arduino Workshop(动手玩转Arduino)》—— John Boxall</h1>
+      
+    
+
+    <div class="new-meta-box">
+      
+        <div class="new-meta-item author">
+          <a href="https://www.aurdes.com">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            ezhq
+          </a>
+        </div>
+      
+      
+        <div class="new-meta-item date">
+          <a class="notlink">
+            <i class="fas fa-clock" aria-hidden="true"></i>
+            2016-11-22
+          </a>
+        </div>
+      
+      
+        
+          
+          <div class="new-meta-item category">
+            <a href="/categories/Read/Arduino/">
+              <i class="fas fa-folder-open" aria-hidden="true"></i>
+              Read&nbsp;/&nbsp;Arduino
+            </a>
+          </div>
+        
+      
+      
+        
+          <div class="new-meta-item browse busuanzi">
+            <a class="notlink">
+              <i class="fas fa-eye" aria-hidden="true"></i>
+              <span id="busuanzi_value_page_pv">
+                <i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i>
+              </span>
+            </a>
+          </div>
+        
+      
+      
+    </div>
+    <hr>
+  </div>
+</section>
+
+    <section class="article typo">
+      <div class="article-entry" itemprop="articleBody">
+        <p>关于Arduino，关于硬件。文章较长，PC环境下浏览体验更佳。</p>
+<a id="more"></a>
+<blockquote>
+<p>最新更新：20170309</p>
+</blockquote>
+<h2 id="一-起步"><a href="#一-起步" class="headerlink" title="一 起步"></a>一 起步</h2><p><strong>章节内容</strong>  </p>
+<ul>
+<li>简要介绍 Arduino 能做什么以及一些作品  </li>
+<li>Arduino 集成开发环境(IDE)的安装  </li>
+<li>关于 Arduino 使用的一些安全提示  </li>
+</ul>
+<h3 id="所需的软件"><a href="#所需的软件" class="headerlink" title="所需的软件"></a>所需的软件</h3><p><a href="https://www.arduino.cc/en/Main/Software" target="_blank" rel="noopener">Arduino IDE 官方下载页面（包含各系统对应版本）</a>  </p>
+<h4 id="Windows-XP-及后续版本"><a href="#Windows-XP-及后续版本" class="headerlink" title="Windows XP 及后续版本"></a>Windows XP 及后续版本</h4><ol>
+<li>Windows 版本的Arduino IDE 下载后为一个压缩包，解压后即为软件以及相关文件，无需安装过程。可以将软件包放到自己想要放到的位置，然后直接为软件包内的 arduio.exe 创建一个桌面快捷方式即可。  </li>
+<li>软件下载并解压好后需要安装驱动才可进行后续工作。  </li>
+<li>不能忘记在IDE软件内设置 Arduino 的型号和串口号。  </li>
+<li>Tips：软件语言可以设置为英文或中文。在软件菜单 File —— Preference 中设置。  </li>
+</ol>
+<h3 id="安全"><a href="#安全" class="headerlink" title="安全"></a>安全</h3><ul>
+<li>Arduino 几乎不需要用到市电。  </li>
+</ul>
+<hr>
+<h2 id="二-探索-Arduino-板和-IDE"><a href="#二-探索-Arduino-板和-IDE" class="headerlink" title="二 探索 Arduino 板和 IDE"></a>二 探索 Arduino 板和 IDE</h2><p><strong>章节内容</strong>  </p>
+<ul>
+<li>介绍基本Arduino板上主要小部件  </li>
+<li>Arduino IDE 简要介绍  </li>
+<li>Arduino 程序的基本结构以及检查和修改  </li>
+</ul>
+<h3 id="Arduino-板"><a href="#Arduino-板" class="headerlink" title="Arduino 板"></a>Arduino 板</h3><ol>
+<li>带 ~ 符号的引脚都可以进行模拟信号的操作。  </li>
+<li>引脚A4、A5和引脚0、1均也是串口，可以用来与其他器件发送和接收数据。  </li>
+<li>使用多个盾板时，要记住每块盾板都用了哪些引脚，避免相互引起冲突。  </li>
+</ol>
+<h3 id="在-IDE-里创建第一个程序"><a href="#在-IDE-里创建第一个程序" class="headerlink" title="在 IDE 里创建第一个程序"></a>在 IDE 里创建第一个程序</h3><h4 id="setup-函数"><a href="#setup-函数" class="headerlink" title="setup 函数"></a>setup 函数</h4><ul>
+<li>setup 函数只在每次开机或重启时执行一次。  </li>
+</ul>
+<h4 id="loop-函数"><a href="#loop-函数" class="headerlink" title="loop 函数"></a>loop 函数</h4><ul>
+<li>loop 函数是程序运行期间持续循环运行的部分。  </li>
+<li>Arduino IDE 不会自动保存当前文件，需要经常手动保存当前文件。  </li>
+<li>引脚控制中，HIGH 和 LOW 可以分别用 1 和 0 代替，效果一样。  </li>
+</ul>
+<h4 id="检查程序"><a href="#检查程序" class="headerlink" title="检查程序"></a>检查程序</h4><ul>
+<li>程序出错时，错误一般出在高亮标识的那一行或前一行。  </li>
+</ul>
+<hr>
+<h2 id="三-第一步"><a href="#三-第一步" class="headerlink" title="三 第一步"></a>三 第一步</h2><h3 id="电子元件"><a href="#电子元件" class="headerlink" title="电子元件"></a>电子元件</h3><h4 id="电阻"><a href="#电阻" class="headerlink" title="电阻"></a>电阻</h4><ul>
+<li>电阻阻值读法：<br><strong>第一环</strong>：标示阻值的第一个数字<br><strong>第二环</strong>：标示阻值的第二个数字<br><strong>第三环</strong>：标示倍数（如果共有4环）或第三个数字（共有5环）<br><strong>第四环</strong>：一共有5环的倍数<br><strong>第五环</strong>：表示误差（精度）  </li>
+<li>电阻色环颜色对应数值<br><strong>颜色</strong> —— <strong>欧姆</strong><br>黑色——0<br>棕色——1<br>红色——2<br>橙色——3<br>青色——4<br>绿色——5<br>蓝色——6<br>紫色——7<br>灰色——8<br>白色——9</li>
+</ul>
+<h4 id="发光二极管"><a href="#发光二极管" class="headerlink" title="发光二极管"></a>发光二极管</h4><ul>
+<li>使用LED的过程中要考虑到 LED 的工作电压和电流  </li>
+<li>红色LED一般需要 1.7V 电压和 5~12mA 的电流  </li>
+<li>Arduino 的输出为 5V，以及能输出大的多的电流  </li>
+<li>不太确定的情况下可选择阻值稍大一些的电阻  </li>
+</ul>
+<h4 id="面包板"><a href="#面包板" class="headerlink" title="面包板"></a>面包板</h4><ul>
+<li>使用面包板要明确面包板的插孔内部是如何连接的  </li>
+</ul>
+<h3 id="作品1：做出闪烁的LED波"><a href="#作品1：做出闪烁的LED波" class="headerlink" title="作品1：做出闪烁的LED波"></a>作品1：做出闪烁的LED波</h3><h4 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h4><ol>
+<li>点亮 LED 1  </li>
+<li>等待半秒  </li>
+<li>熄灭 LED 1  </li>
+<li>点亮 LED 2  </li>
+<li>等待半秒  </li>
+<li>熄灭 LED 2  </li>
+<li>持续重复上述步骤直至 LED 5 被点亮，然后从 LED 5 做到 LED 1  </li>
+<li>不停地重复  </li>
+</ol>
+<h4 id="元件"><a href="#元件" class="headerlink" title="元件"></a>元件</h4><ul>
+<li>Arduino 和 USB连接线  </li>
+<li>5个 LED  </li>
+<li>5个 560Ω 左右的电阻  </li>
+<li>一块面包板  </li>
+<li>若干连接线  </li>
+</ul>
+<h4 id="程序"><a href="#程序" class="headerlink" title="程序"></a>程序</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ArduionWorkshop_Work1_闪烁的LED波</span></span><br><span class="line"><span class="comment">// ezhq_16/11/25</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">setup</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  pinMode(<span class="number">2</span>,OUTPUT); <span class="comment">// 设置数字引脚2~6为输出</span></span><br><span class="line">  pinMode(<span class="number">3</span>,OUTPUT);</span><br><span class="line">  pinMode(<span class="number">4</span>,OUTPUT);</span><br><span class="line">  pinMode(<span class="number">5</span>,OUTPUT);</span><br><span class="line">  pinMode(<span class="number">6</span>,OUTPUT);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">loop</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  digitalWrite(<span class="number">2</span>,HIGH); <span class="comment">//点亮 LED 1</span></span><br><span class="line">  delay(<span class="number">500</span>); <span class="comment">//等待半秒</span></span><br><span class="line">  digitalWrite(<span class="number">2</span>,LOW); <span class="comment">//熄灭 LED 1</span></span><br><span class="line">  digitalWrite(<span class="number">3</span>,HIGH); <span class="comment">//按同样规律点亮剩余LED灯</span></span><br><span class="line">  delay(<span class="number">500</span>); </span><br><span class="line">  digitalWrite(<span class="number">3</span>,LOW);</span><br><span class="line">  digitalWrite(<span class="number">4</span>,HIGH);</span><br><span class="line">  delay(<span class="number">500</span>);</span><br><span class="line">  digitalWrite(<span class="number">4</span>,LOW);</span><br><span class="line">  digitalWrite(<span class="number">5</span>,HIGH);</span><br><span class="line">  delay(<span class="number">500</span>);</span><br><span class="line">  digitalWrite(<span class="number">5</span>,LOW);</span><br><span class="line">  digitalWrite(<span class="number">6</span>,HIGH);</span><br><span class="line">  delay(<span class="number">500</span>);</span><br><span class="line">  digitalWrite(<span class="number">6</span>,LOW); <span class="comment">//从LED5 开始反向进行</span></span><br><span class="line">  digitalWrite(<span class="number">5</span>,HIGH);</span><br><span class="line">  delay(<span class="number">500</span>);</span><br><span class="line">  digitalWrite(<span class="number">5</span>,LOW);</span><br><span class="line">  digitalWrite(<span class="number">4</span>,HIGH);</span><br><span class="line">  delay(<span class="number">500</span>);</span><br><span class="line">  digitalWrite(<span class="number">4</span>,LOW);</span><br><span class="line">  digitalWrite(<span class="number">3</span>,HIGH);</span><br><span class="line">  delay(<span class="number">500</span>);</span><br><span class="line">  digitalWrite(<span class="number">3</span>,LOW);</span><br><span class="line">  <span class="comment">//程序会从开头循环运行</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="电路"><a href="#电路" class="headerlink" title="电路"></a>电路</h4><h3 id="作品2：用for-循环做重复动作"><a href="#作品2：用for-循环做重复动作" class="headerlink" title="作品2：用for 循环做重复动作"></a>作品2：用for 循环做重复动作</h3><ul>
+<li>作品2中，第二个for循环中，将“a&gt;1”改为“a&gt;2”,会使得最终效果更顺畅自然。  </li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ArduionWorkshop_Work2_用 for 循环做重复动作</span></span><br><span class="line"><span class="comment">// ezhq_16/11/25</span></span><br><span class="line"><span class="keyword">int</span> d = <span class="number">100</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">setup</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  pinMode(<span class="number">2</span>,OUTPUT); <span class="comment">// 设置数字引脚2~6为输出</span></span><br><span class="line">  pinMode(<span class="number">3</span>,OUTPUT);</span><br><span class="line">  pinMode(<span class="number">4</span>,OUTPUT);</span><br><span class="line">  pinMode(<span class="number">5</span>,OUTPUT);</span><br><span class="line">  pinMode(<span class="number">6</span>,OUTPUT);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">loop</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">for</span> ( <span class="keyword">int</span> a = <span class="number">2</span>; a &lt; <span class="number">7</span>; a++)</span><br><span class="line">  &#123;</span><br><span class="line">    digitalWrite(a, HIGH);</span><br><span class="line">    delay(d);</span><br><span class="line">    digitalWrite(a, LOW);</span><br><span class="line">    delay(d);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">for</span> ( <span class="keyword">int</span> a = <span class="number">5</span>; a &gt; <span class="number">2</span>; a--)</span><br><span class="line">  &#123;</span><br><span class="line">    digitalWrite(a, HIGH);</span><br><span class="line">    delay(d);</span><br><span class="line">    digitalWrite(a, LOW);</span><br><span class="line">    delay(d);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="用脉冲宽度调制变化LED的亮度"><a href="#用脉冲宽度调制变化LED的亮度" class="headerlink" title="用脉冲宽度调制变化LED的亮度"></a>用脉冲宽度调制变化LED的亮度</h3><ul>
+<li>PWM(Pulse Width Modulation)脉冲宽度调制/脉宽调制  </li>
+<li>Aruino 的 PWM 大约每秒500次的速度切换 LED 亮灭来形成各种来形成各种亮度  </li>
+<li>亮度的变化由数字输出引脚输出高电平的时间和低电平的时间的比值不同来实现（占空比）  </li>
+<li>产生 PWM 信号，所用函数为analogWrite(x, y), x 为数字引脚编号；y 为占空比的比值，范围为 0~255，255 表示 100% 占空比。  </li>
+</ul>
+<h3 id="作品3：演示PWM"><a href="#作品3：演示PWM" class="headerlink" title="作品3：演示PWM"></a>作品3：演示PWM</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ArduionWorkshop_Work3_演示PWM</span></span><br><span class="line"><span class="comment">// ezhq_16/11/25</span></span><br><span class="line"><span class="keyword">int</span> d = <span class="number">5</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">setup</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  pinMode(<span class="number">3</span>,OUTPUT); <span class="comment">// LED 控制引脚3，3是具有带有 PWM 功能的引脚</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">loop</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">for</span> ( <span class="keyword">int</span> a = <span class="number">0</span>; a &lt; <span class="number">256</span>; a++)</span><br><span class="line">  &#123;</span><br><span class="line">    analogWrite(<span class="number">3</span>, a);</span><br><span class="line">    delay(d);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">for</span> ( <span class="keyword">int</span> a = <span class="number">255</span>; a &gt;=<span class="number">0</span>; a--)</span><br><span class="line">  &#123;</span><br><span class="line">    analogWrite(<span class="number">3</span>, a);</span><br><span class="line">    delay(d);</span><br><span class="line">  &#125;</span><br><span class="line">  delay(d);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="更多的电子元件"><a href="#更多的电子元件" class="headerlink" title="更多的电子元件"></a>更多的电子元件</h3><h4 id="晶体管"><a href="#晶体管" class="headerlink" title="晶体管"></a>晶体管</h4><ul>
+<li>使用晶体管一定要确定晶体管的管脚排列，正确连接管脚  </li>
+</ul>
+<h4 id="整流二极管"><a href="#整流二极管" class="headerlink" title="整流二极管"></a>整流二极管</h4><ul>
+<li>整流二极管的负极为标有黑色环的一端    </li>
+</ul>
+<h4 id="继电器"><a href="#继电器" class="headerlink" title="继电器"></a>继电器</h4><h3 id="高压电路"><a href="#高压电路" class="headerlink" title="高压电路"></a>高压电路</h3><ul>
+<li>高压电路注意保护电路的安排，以免损害设备器件  </li>
+</ul>
+<hr>
+<h2 id="四-构建模块"><a href="#四-构建模块" class="headerlink" title="四 构建模块"></a>四 构建模块</h2><h3 id="电容"><a href="#电容" class="headerlink" title="电容"></a>电容</h3><h4 id="数字输入"><a href="#数字输入" class="headerlink" title="数字输入"></a>数字输入</h4><ul>
+<li>使用开关时要注意开关抖动现象的存在并对此情况进行考虑  </li>
+</ul>
+<h3 id="作品4：演示数字输入"><a href="#作品4：演示数字输入" class="headerlink" title="作品4：演示数字输入"></a>作品4：演示数字输入</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ArduionWorkshop_Work4_演示数字输入</span></span><br><span class="line"><span class="comment">// ezhq_17/01/11</span></span><br><span class="line"><span class="comment">// 注：若没有电容，可以直接在开关输出引脚处直接外加一个220R的电阻到GND</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LED 12</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> BUTTON 7</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">setup</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  pinMode(LED, OUTPUT);</span><br><span class="line">  pinMode(BUTTON, INPUT);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">loop</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">if</span> ( digitalRead(BUTTON) == HIGH)</span><br><span class="line">  &#123;</span><br><span class="line">    digitalWrite(LED,HIGH);</span><br><span class="line">    delay(<span class="number">500</span>);</span><br><span class="line">    digitalWrite(LED,LOW);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>注：若没有电容，可以直接在开关输出引脚处直接外加一个220R的电阻到GND实现去除抖动的作用  </li>
+</ul>
+<hr>
+<h2 id="五-使用函数"><a href="#五-使用函数" class="headerlink" title="五 使用函数"></a>五 使用函数</h2><hr>
+<h2 id="六-数字、变量和算术"><a href="#六-数字、变量和算术" class="headerlink" title="六 数字、变量和算术"></a>六 数字、变量和算术</h2><hr>
+<h2 id="七-液晶显示器"><a href="#七-液晶显示器" class="headerlink" title="七 液晶显示器"></a>七 液晶显示器</h2><hr>
+<h2 id="八-扩展-Arduino"><a href="#八-扩展-Arduino" class="headerlink" title="八 扩展 Arduino"></a>八 扩展 Arduino</h2><hr>
+<h2 id="九-数字键盘"><a href="#九-数字键盘" class="headerlink" title="九 数字键盘"></a>九 数字键盘</h2><hr>
+<h2 id="十-用触摸屏获得用户输入"><a href="#十-用触摸屏获得用户输入" class="headerlink" title="十 用触摸屏获得用户输入"></a>十 用触摸屏获得用户输入</h2><hr>
+<h2 id="十一-认识-Arduino-系列"><a href="#十一-认识-Arduino-系列" class="headerlink" title="十一 认识 Arduino 系列"></a>十一 认识 Arduino 系列</h2><hr>
+<h2 id="十二-电机和运动"><a href="#十二-电机和运动" class="headerlink" title="十二 电机和运动"></a>十二 电机和运动</h2><hr>
+<h2 id="十三-用-Arduino-接-GPS"><a href="#十三-用-Arduino-接-GPS" class="headerlink" title="十三 用 Arduino 接 GPS"></a>十三 用 Arduino 接 GPS</h2><hr>
+<h2 id="十四-无线数据通信"><a href="#十四-无线数据通信" class="headerlink" title="十四 无线数据通信"></a>十四 无线数据通信</h2><hr>
+<h2 id="十五-红外遥控"><a href="#十五-红外遥控" class="headerlink" title="十五 红外遥控"></a>十五 红外遥控</h2><hr>
+<h2 id="十六-读RFID-标签"><a href="#十六-读RFID-标签" class="headerlink" title="十六 读RFID 标签"></a>十六 读RFID 标签</h2><hr>
+<h2 id="十七-数据总线"><a href="#十七-数据总线" class="headerlink" title="十七 数据总线"></a>十七 数据总线</h2><hr>
+<h2 id="十八-真实时钟"><a href="#十八-真实时钟" class="headerlink" title="十八 真实时钟"></a>十八 真实时钟</h2><hr>
+<h2 id="十九-互联网"><a href="#十九-互联网" class="headerlink" title="十九 互联网"></a>十九 互联网</h2><hr>
+<h2 id="二十-手机通信"><a href="#二十-手机通信" class="headerlink" title="二十 手机通信"></a>二十 手机通信</h2><hr>
+<p><strong>版权声明</strong><br>创作站点：<a href="http://aurdes.com/" target="_blank" rel="noopener">AURDES</a><br>本文作者：<a href="mailto:ezhq@outlook.com" target="_blank" rel="noopener">ezhq</a><br>本文链接：<a href="http://aurdes.com/2016/11/22/ArduinoWorkshop/" target="_blank" rel="noopener">http://aurdes.com/2016/11/22/ArduinoWorkshop/</a><br>版权备注：任何形式使用本作品需保留本完整版权声明，使用本作品前应先和作者取得联系并说明用途，取得作者同意后方可使用。详细了解请点击上方本文作者以取得邮箱联系。</p>
+
+      </div>
+        
+          <section class="meta" id="footer-meta">
+            <hr>
+            <div class="new-meta-box">
+              
+                <div class="new-meta-item date" itemprop="dateUpdated" datetime="2016-11-22T22:00:00+08:00">
+                  <a class="notlink">
+                    <i class="fas fa-pencil-alt" aria-hidden="true"></i>
+                    2016-11-22
+                  </a>
+                </div>
+              
+              
+                
+                <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Read/"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;Read</a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Arduino/"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;Arduino</a></div>
+              
+              
+            </div>
+          </section>
+        
+
+        
+            <div class="prev-next">
+                
+                    <section class="prev">
+                        <span class="art-item-left">
+                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
+                            <h4>
+                                <a href="/2016/12/24/Hexo添加网易云音乐/" rel="prev" title="Hexo博客Next主题加入网易云音乐播放器">
+                                  
+                                      Hexo博客Next主题加入网易云音乐播放器
+                                  
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="/tags/Guide/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>Guide</a> <a class="tag" href="/tags/Hexo/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>Hexo</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
+                
+                
+                    <section class="next">
+                        <span class="art-item-right" aria-hidden="true">
+                            <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                            <h4>
+                                <a href="/2016/11/11/系统hosts文件修改教程/" rel="prev" title="系统hosts文件修改教程">
+                                    
+                                        系统hosts文件修改教程
+                                    
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="/tags/教程/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>教程</a> <a class="tag" href="/tags/软件/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>软件</a> <a class="tag" href="/tags/科学上网/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>科学上网</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
+                
+            </div>
+        
+
+    </section>
+
+</article>
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+<br>
+
+<!-- 显示推荐文章和评论 -->
+
+
+
+
+
+<script>
+    window.subData = {
+        title: '《Arduino Workshop(动手玩转Arduino)》—— John Boxall',
+        tools: true
+    }
+</script>
+
+
+        </div>
+        <aside class='l_side'>
+            
+  
+  
+    
+      
+      
+        <section class="author">
+  <div class="content pure">
+    
+      <div class="avatar">
+        <img class="avatar" src="/img/main/logo_single.png">
+      </div>
+    
+    
+      <div class="text">
+        
+        
+          <p>稳定 安全 高效</p>
+
+        
+        
+      </div>
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="mailto:ezhq@outlook.com" class="social flat-btn" target="_blank" rel="external"><i class="social fas fa-envelope" aria-hidden="true"></i></a>
+          
+        
+          
+            <a href="https://github.com/ezhq" class="social flat-btn" target="_blank" rel="external"><i class="social fab fa-github" aria-hidden="true"></i></a>
+          
+        
+          
+            <a href="https://music.163.com/#/user/home?id=351793755" class="social flat-btn" target="_blank" rel="external"><i class="social fas fa-music" aria-hidden="true"></i></a>
+          
+        
+      </div>
+    
+  </div>
+</section>
+
+      
+    
+  
+    
+      
+      
+        
+  <section class="toc-wrapper">
+    
+<header class="pure">
+  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;文章目录</div>
+  
+    <div class="wrapper"><a class="s-toc rightBtn" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div>
+  
+</header>
+
+    <div class="content pure">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一-起步"><span class="toc-text">一 起步</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#所需的软件"><span class="toc-text">所需的软件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Windows-XP-及后续版本"><span class="toc-text">Windows XP 及后续版本</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安全"><span class="toc-text">安全</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二-探索-Arduino-板和-IDE"><span class="toc-text">二 探索 Arduino 板和 IDE</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Arduino-板"><span class="toc-text">Arduino 板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在-IDE-里创建第一个程序"><span class="toc-text">在 IDE 里创建第一个程序</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#setup-函数"><span class="toc-text">setup 函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#loop-函数"><span class="toc-text">loop 函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#检查程序"><span class="toc-text">检查程序</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三-第一步"><span class="toc-text">三 第一步</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#电子元件"><span class="toc-text">电子元件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#电阻"><span class="toc-text">电阻</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#发光二极管"><span class="toc-text">发光二极管</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#面包板"><span class="toc-text">面包板</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#作品1：做出闪烁的LED波"><span class="toc-text">作品1：做出闪烁的LED波</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#算法"><span class="toc-text">算法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#元件"><span class="toc-text">元件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#程序"><span class="toc-text">程序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#电路"><span class="toc-text">电路</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#作品2：用for-循环做重复动作"><span class="toc-text">作品2：用for 循环做重复动作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#用脉冲宽度调制变化LED的亮度"><span class="toc-text">用脉冲宽度调制变化LED的亮度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#作品3：演示PWM"><span class="toc-text">作品3：演示PWM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#更多的电子元件"><span class="toc-text">更多的电子元件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#晶体管"><span class="toc-text">晶体管</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#整流二极管"><span class="toc-text">整流二极管</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#继电器"><span class="toc-text">继电器</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#高压电路"><span class="toc-text">高压电路</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四-构建模块"><span class="toc-text">四 构建模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#电容"><span class="toc-text">电容</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#数字输入"><span class="toc-text">数字输入</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#作品4：演示数字输入"><span class="toc-text">作品4：演示数字输入</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五-使用函数"><span class="toc-text">五 使用函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#六-数字、变量和算术"><span class="toc-text">六 数字、变量和算术</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#七-液晶显示器"><span class="toc-text">七 液晶显示器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#八-扩展-Arduino"><span class="toc-text">八 扩展 Arduino</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#九-数字键盘"><span class="toc-text">九 数字键盘</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#十-用触摸屏获得用户输入"><span class="toc-text">十 用触摸屏获得用户输入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#十一-认识-Arduino-系列"><span class="toc-text">十一 认识 Arduino 系列</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#十二-电机和运动"><span class="toc-text">十二 电机和运动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#十三-用-Arduino-接-GPS"><span class="toc-text">十三 用 Arduino 接 GPS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#十四-无线数据通信"><span class="toc-text">十四 无线数据通信</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#十五-红外遥控"><span class="toc-text">十五 红外遥控</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#十六-读RFID-标签"><span class="toc-text">十六 读RFID 标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#十七-数据总线"><span class="toc-text">十七 数据总线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#十八-真实时钟"><span class="toc-text">十八 真实时钟</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#十九-互联网"><span class="toc-text">十九 互联网</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二十-手机通信"><span class="toc-text">二十 手机通信</span></a></li></ol>
+    </div>
+  </section>
+
+
+      
+    
+  
+    
+      
+      
+        <section class="plain">
+  
+<header class="pure">
+  <div><i class="fas fa-bullhorn fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;Notice</div>
+  
+</header>
+
+  <div class="content pure">
+    <p><a href>ezhq.xyz</a> 正在修改中，本站临时承担 ezhq.xyz 内容。访问本站 aurdes.com 或 ezhq.xyz 均能自动引导你到真正的内容处，请和往照常访问。</p>
+
+  </div>
+</section>
+
+      
+    
+  
+    
+      
+      
+        
+  <section class="tagcloud">
+    
+<header class="pure">
+  <div><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;热门标签</div>
+  
+</header>
+
+    <div class="content pure">
+      <a href="/tags/Arduino/" style="font-size: 14px; color: #999">Arduino</a> <a href="/tags/C/" style="font-size: 14px; color: #999">C</a> <a href="/tags/C/" style="font-size: 14px; color: #999">C#</a> <a href="/tags/C4D/" style="font-size: 19px; color: #777">C4D</a> <a href="/tags/CSS/" style="font-size: 14px; color: #999">CSS</a> <a href="/tags/Dev/" style="font-size: 24px; color: #555">Dev</a> <a href="/tags/Git/" style="font-size: 14px; color: #999">Git</a> <a href="/tags/Guide/" style="font-size: 14px; color: #999">Guide</a> <a href="/tags/HTML/" style="font-size: 14px; color: #999">HTML</a> <a href="/tags/Hexo/" style="font-size: 14px; color: #999">Hexo</a> <a href="/tags/MATLAB/" style="font-size: 14px; color: #999">MATLAB</a> <a href="/tags/PowerShell/" style="font-size: 14px; color: #999">PowerShell</a> <a href="/tags/Read/" style="font-size: 19px; color: #777">Read</a> <a href="/tags/UWP/" style="font-size: 14px; color: #999">UWP</a> <a href="/tags/Web/" style="font-size: 19px; color: #777">Web</a> <a href="/tags/个人作品/" style="font-size: 19px; color: #777">个人作品</a> <a href="/tags/慕课笔记/" style="font-size: 14px; color: #999">慕课笔记</a> <a href="/tags/教程/" style="font-size: 19px; color: #777">教程</a> <a href="/tags/百度云/" style="font-size: 14px; color: #999">百度云</a> <a href="/tags/科学上网/" style="font-size: 14px; color: #999">科学上网</a> <a href="/tags/纪念日/" style="font-size: 14px; color: #999">纪念日</a> <a href="/tags/计算机系统/" style="font-size: 14px; color: #999">计算机系统</a> <a href="/tags/软件/" style="font-size: 14px; color: #999">软件</a> <a href="/tags/阅读笔记/" style="font-size: 14px; color: #999">阅读笔记</a> <a href="/tags/随想/" style="font-size: 14px; color: #999">随想</a> <a href="/tags/随笔/" style="font-size: 19px; color: #777">随笔</a>
+    </div>
+  </section>
+
+
+      
+    
+  
+    
+      
+      
+        <section class="list">
+  
+<header class="pure">
+  <div><i class="fas fa-medal fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;Projects</div>
+  
+    <a class="rightBtn" target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/ezhq" title="https://github.com/ezhq">
+    <i class="fas fa-arrow-right fa-fw"></i></a>
+  
+</header>
+
+  <div class="content pure">
+    <ul class="entry">
+      
+        <li><a class="flat-box" title="https://github.com/ezhq/CS50Web" href="https://github.com/ezhq/CS50Web">
+          <div class="name">
+            
+              <i class="fas fa-cube fa-fw" aria-hidden="true"></i>
+            
+            &nbsp;&nbsp;CS50Web
+          </div>
+          
+            <div class="badge">(CS50练习)</div>
+          
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
+
+      
+    
+  
+    
+      
+      
+        <section class="list">
+  
+<header class="pure">
+  <div><i class="fas fa-link fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;Link</div>
+  
+</header>
+
+  <div class="content pure">
+    <ul class="entry">
+      
+        <li><a class="flat-box" title="https://aurdes.com/about/" href="https://aurdes.com/about/">
+          <div class="name">
+            
+              <i class="fas fa-comment-dots fa-fw" aria-hidden="true"></i>
+            
+            &nbsp;&nbsp;About Me
+          </div>
+          
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
+
+      
+    
+  
+    
+      
+      
+        
+
+      
+    
+  
+
+
+        </aside>
+        <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+    </div>
+    <footer id="footer" class="clearfix">
+  
+  
+    <div class="social-wrapper">
+      
+        
+          <a href="mailto:ezhq@outlook.com" class="social fas fa-envelope flat-btn" target="_blank" rel="external"></a>
+        
+      
+        
+          <a href="https://github.com/ezhq" class="social fab fa-github flat-btn" target="_blank" rel="external"></a>
+        
+      
+        
+          <a href="https://music.163.com/#/user/home?id=351793755" class="social fas fa-music flat-btn" target="_blank" rel="external"></a>
+        
+      
+    </div>
+  
+  <br>
+  <div><p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+</div>
+  <div>本站使用 <a href="https://xaoxuu.com/wiki/material-x/" target="_blank" class="codename">Material X</a> 作为主题，总访问量为 <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span> 次。
+  </div>
+</footer>
+
+    <script>setLoadingBarProgress(80);</script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+
+  <script>
+    var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+    var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+    var ALGOLIA_API_KEY = "";
+    var ALGOLIA_APP_ID = "";
+    var ALGOLIA_INDEX_NAME = "";
+    var AZURE_SERVICE_NAME = "";
+    var AZURE_INDEX_NAME = "";
+    var AZURE_QUERY_KEY = "";
+    var BAIDU_API_ID = "";
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/"||"/";
+    if(!ROOT.endsWith('/'))ROOT += '/';
+  </script>
+
+
+
+  <script async src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      const $reveal = $('.reveal');
+      if ($reveal.length === 0) return;
+      const sr = ScrollReveal({ distance: 0 });
+      sr.reveal('.reveal');
+    });
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+
+
+  <script src="/js/app.js"></script>
+<script src="/js/search.js"></script>
+<script src="/js/clipboard-use.js"></script>
+
+
+
+
+
+
+
+    <script>setLoadingBarProgress(100);</script>
+</body>
+</html>
