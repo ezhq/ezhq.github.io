@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.aurdes.com/"/>
-  <updated>2019-03-27T03:40:34.614Z</updated>
+  <updated>2019-03-27T10:50:40.095Z</updated>
   <id>https://www.aurdes.com/</id>
   
   <author>
@@ -18,12 +18,12 @@
   
   <entry>
     <title>ezhq.xyz will better, please wait.</title>
-    <link href="https://www.aurdes.com/2019/03/26/hello-world/"/>
-    <id>https://www.aurdes.com/2019/03/26/hello-world/</id>
+    <link href="https://www.aurdes.com/2019/03/26/Notice_20190327/"/>
+    <id>https://www.aurdes.com/2019/03/26/Notice_20190327/</id>
     <published>2019-03-26T10:17:11.576Z</published>
-    <updated>2019-03-27T03:40:34.614Z</updated>
+    <updated>2019-03-27T10:50:40.095Z</updated>
     
-    <content type="html"><![CDATA[<p>ezhq.xyz is in building. This week will done.</p><a id="more"></a><blockquote><p>There is unuse information below.</p></blockquote><h2 id="Test-Info"><a href="#Test-Info" class="headerlink" title="Test Info"></a>Test Info</h2><p><strong>just test</strong></p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p>ezhq.xyz is in building. This week will done.</p><a id="more"></a><p>处于整体规划原因，ezhq.xyz于近日进行改进，原有访问方式不受影响，可以照常通过原方式访问，预计本周完成改进。</p><p>ezhq<br>2019/3/27</p>]]></content>
     
     <summary type="html">
     
